@@ -178,8 +178,12 @@ header .container nav ul li {
 
 header .container nav ul li a {
   font-size: 1.1rem;
-  font-weight: 550;
+  font-weight: 600;
   color: #000;
+}
+
+header .container nav ul li a:hover {
+  opacity: .8;
 }
 
 .auth a:last-child {
@@ -408,7 +412,6 @@ header .container nav ul li a {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  overflow: visible;
 }
 
 .heroFlavor .container .flavor {
@@ -551,7 +554,7 @@ header .container nav ul li a {
 }
 
 .containerTestimoni .container .testimoni .perTestimoni {
-  height: 550px;
+  height: 600px;
   width: calc(94%/3);
   padding: 20px;
   margin: 10px;
@@ -682,6 +685,66 @@ header .container nav ul li a {
 .footer .container .box .sosmed .persosmed:hover {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+}
+
+.heroFlavor2 {
+  width: 100%;
+  height: 70vh;
+}
+
+.heroFlavor2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.heroFlavor2 .container .flavor1,
+.heroFlavor2 .container .flavor2 {
+  width: 50%;
+  height: 100%;
+  margin: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 50px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.heroFlavor2 .container .flavor1 .caption,
+.heroFlavor2 .container .flavor2 .caption {
+  display: none;
+}
+
+.heroFlavor2 .container .flavor1 h1,
+.heroFlavor2 .container .flavor2 h1 {
+  font-size: 2.4rem;
+  font-weight: 650;
+}
+
+.heroFlavor2 .container .flavor1::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  -webkit-transform: skew(-20deg) translateX(70px);
+          transform: skew(-20deg) translateX(70px);
+  background-color: var(--ungu);
+}
+
+.heroFlavor2 .container .flavor2::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  -webkit-transform: skew(-20deg) translateX(30px);
+          transform: skew(-20deg) translateX(30px);
+  background-color: var(--ungu);
 }
 
 @media (min-width: 1500px) {
