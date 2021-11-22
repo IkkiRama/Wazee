@@ -72,7 +72,7 @@
     --biru: #33CCFF;
     --hijau: #1EE592;
     --putih-900: #F2F4F7;
-    --border: 1px solid #e4e4e7;
+    --border: 2px solid #e4e4e7;
     ;
 }
 
@@ -323,14 +323,14 @@ header {
             border-radius: 20px;
 
             h1 {
-                font-size: 2.4rem;
+                font-size: 2.2rem;
                 font-weight: 800;
                 margin-bottom: 20px;
             }
 
             p {
                 font-size: 1.3rem;
-                font-weight: 500;
+                font-weight: 400;
                 margin-bottom: 50px;
             }
 
@@ -371,9 +371,15 @@ header {
         .caption {
             width: 40%;
             height: 100%;
+            // jcs
             margin-right: 0;
             margin-left: 20px;
             background-color: var(--putih-900);
+
+            p {
+                font-size: 1.1rem;
+                margin-bottom: 0;
+            }
         }
 
         .img {
@@ -434,7 +440,7 @@ header {
                 right: 0;
                 border-radius: 10px;
                 transform-origin: center top;
-                transform: skew(20deg);
+                transform: skewX(20deg);
                 background-color: var(--ungu);
             }
 
@@ -454,7 +460,7 @@ header {
                 width: 100%;
                 height: 100%;
                 transform-origin: center top;
-                transform: skew(20deg);
+                transform: skewX(20deg);
                 border-radius: 10px;
                 background-image: url("../img/home/hero1.jpg");
 
@@ -624,8 +630,6 @@ header {
 
 
 
-
-
 .heroFlavor2 {
     width: 100%;
     height: 70vh;
@@ -635,68 +639,172 @@ header {
 
         .flavor1,
         .flavor2 {
-            width: 50%;
             height: 100%;
-            margin: 0 10px;
-            display: flex;
-            align-items: center;
-            // justify-content: center;
-            padding-left: 50px;
             border-radius: 10px;
+            margin-right: 20px;
             position: relative;
+            display: flex;
+
 
             .caption {
-                display: none;
-            }
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                padding: 30px;
+                position: relative;
+                z-index: 9999999;
 
-            h1 {
-                font-size: 2.4rem;
-                font-weight: 650;
+                img {
+                    height: 50px;
+                    width: auto;
+                }
+
+                h1 {
+                    color: var(--putih);
+                    font-size: 2.4rem;
+                    font-weight: 800;
+                    margin-top: 20px;
+                }
             }
         }
 
         .flavor1 {
-            // background-color: var(--kuning);
+            width: 55%;
+
 
             &::before {
                 content: '';
-                width: 100%;
+                width: 50%;
                 height: 100%;
                 position: absolute;
-                right: 0;
-                transform: skew(-20deg) translateX(70px);
+                right: -10px;
+                border-radius: 10px;
+                transform-origin: center top;
+                transform: skewX(-20deg);
                 background-color: var(--ungu);
+                z-index: 99;
             }
 
-            // .flavor-skew {
-            //     width: 100%;
-            //     height: 100%;
-            //     background-color: var(--hijau);
-            // }
+            .bg {
+                width: 60%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: var(--ungu);
+            }
         }
 
         .flavor2 {
-            // background-color: var(--biru);
-            // transform: skew(-20deg);
+            width: 45%;
+            background-color: var(--hijau);
+
 
             &::before {
                 content: '';
-                width: 100%;
+                width: 50%;
                 height: 100%;
                 position: absolute;
-                left: 0;
-                transform: skew(-20deg) translateX(30px);
-                background-color: var(--ungu);
+                left: 0px;
+                border-radius: 10px;
+                transform-origin: center top;
+                transform: skewX(-20deg);
+                background-color: var(--hijau);
             }
-
-            // .flavor-skew {
-            //     width: 100%;
-            //     height: 100%;
-            //     background-color: var(--hijau);
-            // }
         }
     }
 }
+
+
+
+
+footer {
+    width: 100%;
+    height: 10vh;
+    z-index: 9999999;
+    background-color: var(--putih);
+    border-top: var(--border);
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        color: rgba(74, 75, 76, 0.75);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Partner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -738,12 +846,44 @@ header {
         max-width: 1500px;
     }
 
+    section,
+    footer,
     header {
         display: flex;
         justify-content: center;
     }
 }
 
+
+@media (max-width:1100px) {
+
+    .heroHome,
+    .fitur {
+
+        .container {
+
+            .caption {
+
+                h1 {
+                    font-size: 2rem;
+                    // font-weight: 800;
+                    // margin-bottom: 20px;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                }
+
+            }
+        }
+    }
+
+    section,
+    header {
+        padding: 0 50px;
+    }
+
+}
 
 @media (max-width:850px) {
     header .container {
@@ -759,6 +899,45 @@ header {
     }
 
 
+    .heroHome,
+    .fitur {
+        height: 100%;
+
+        .container {
+            flex-wrap: wrap;
+
+            .img {
+                width: 100%;
+                height: 400px;
+            }
+
+            .caption {
+                width: 100%;
+                margin: 10px 0;
+                padding: 50px 20px;
+
+                h1 {
+                    font-size: 2rem;
+                    // font-weight: 800;
+                    // margin-bottom: 20px;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                }
+
+            }
+        }
+    }
+
+    .heroHome .container {
+        flex-wrap: wrap-reverse;
+    }
+
+    .fitur .container {
+        flex-wrap: wrap;
+    }
+
     .containerNavMobile {
         display: flex;
     }
@@ -768,10 +947,6 @@ header {
 
 @media (max-width:650px) {
 
-    section,
-    header {
-        padding: 0 50px;
-    }
 
     .containerNavMobile {
 

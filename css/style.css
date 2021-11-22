@@ -70,7 +70,7 @@
   --biru: #33CCFF;
   --hijau: #1EE592;
   --putih-900: #F2F4F7;
-  --border: 1px solid #e4e4e7;
+  --border: 2px solid #e4e4e7;
 }
 
 *,
@@ -352,14 +352,14 @@ header .container nav ul li a:hover {
 }
 
 .heroHome .container .caption h1 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 800;
   margin-bottom: 20px;
 }
 
 .heroHome .container .caption p {
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 50px;
 }
 
@@ -394,6 +394,11 @@ header .container nav ul li a:hover {
   margin-right: 0;
   margin-left: 20px;
   background-color: var(--putih-900);
+}
+
+.fitur .container .caption p {
+  font-size: 1.1rem;
+  margin-bottom: 0;
 }
 
 .fitur .container .img {
@@ -468,8 +473,8 @@ header .container nav ul li a:hover {
   border-radius: 10px;
   -webkit-transform-origin: center top;
           transform-origin: center top;
-  -webkit-transform: skew(20deg);
-          transform: skew(20deg);
+  -webkit-transform: skewX(20deg);
+          transform: skewX(20deg);
   background-color: var(--ungu);
 }
 
@@ -490,8 +495,8 @@ header .container nav ul li a:hover {
   height: 100%;
   -webkit-transform-origin: center top;
           transform-origin: center top;
-  -webkit-transform: skew(20deg);
-          transform: skew(20deg);
+  -webkit-transform: skewX(20deg);
+          transform: skewX(20deg);
   border-radius: 10px;
   background-image: url("../img/home/hero1.jpg");
 }
@@ -700,57 +705,125 @@ header .container nav ul li a:hover {
 
 .heroFlavor2 .container .flavor1,
 .heroFlavor2 .container .flavor2 {
+  height: 100%;
+  border-radius: 10px;
+  margin-right: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.heroFlavor2 .container .flavor1 .caption,
+.heroFlavor2 .container .flavor2 .caption {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+  position: relative;
+  z-index: 9999999;
+}
+
+.heroFlavor2 .container .flavor1 .caption img,
+.heroFlavor2 .container .flavor2 .caption img {
+  height: 50px;
+  width: auto;
+}
+
+.heroFlavor2 .container .flavor1 .caption h1,
+.heroFlavor2 .container .flavor2 .caption h1 {
+  color: var(--putih);
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-top: 20px;
+}
+
+.heroFlavor2 .container .flavor1 {
+  width: 55%;
+}
+
+.heroFlavor2 .container .flavor1::before {
+  content: '';
   width: 50%;
   height: 100%;
-  margin: 0 10px;
+  position: absolute;
+  right: -10px;
+  border-radius: 10px;
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  -webkit-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+  background-color: var(--ungu);
+  z-index: 99;
+}
+
+.heroFlavor2 .container .flavor1 .bg {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--ungu);
+}
+
+.heroFlavor2 .container .flavor2 {
+  width: 45%;
+  background-color: var(--hijau);
+}
+
+.heroFlavor2 .container .flavor2::before {
+  content: '';
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  border-radius: 10px;
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  -webkit-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+  background-color: var(--hijau);
+}
+
+footer {
+  width: 100%;
+  height: 10vh;
+  z-index: 9999999;
+  background-color: var(--putih);
+  border-top: var(--border);
+}
+
+footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 50px;
-  border-radius: 10px;
-  position: relative;
-}
-
-.heroFlavor2 .container .flavor1 .caption,
-.heroFlavor2 .container .flavor2 .caption {
-  display: none;
-}
-
-.heroFlavor2 .container .flavor1 h1,
-.heroFlavor2 .container .flavor2 h1 {
-  font-size: 2.4rem;
-  font-weight: 650;
-}
-
-.heroFlavor2 .container .flavor1::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  -webkit-transform: skew(-20deg) translateX(70px);
-          transform: skew(-20deg) translateX(70px);
-  background-color: var(--ungu);
-}
-
-.heroFlavor2 .container .flavor2::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  -webkit-transform: skew(-20deg) translateX(30px);
-          transform: skew(-20deg) translateX(30px);
-  background-color: var(--ungu);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  color: rgba(74, 75, 76, 0.75);
 }
 
 @media (min-width: 1500px) {
   .container {
     max-width: 1500px;
   }
+  section,
+  footer,
   header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -758,6 +831,21 @@ header .container nav ul li a:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media (max-width: 1100px) {
+  .heroHome .container .caption h1,
+  .fitur .container .caption h1 {
+    font-size: 2rem;
+  }
+  .heroHome .container .caption p,
+  .fitur .container .caption p {
+    font-size: 1.1rem;
+  }
+  section,
+  header {
+    padding: 0 50px;
   }
 }
 
@@ -771,6 +859,42 @@ header .container nav ul li a:hover {
     display: -ms-flexbox;
     display: flex;
   }
+  .heroHome,
+  .fitur {
+    height: 100%;
+  }
+  .heroHome .container,
+  .fitur .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .heroHome .container .img,
+  .fitur .container .img {
+    width: 100%;
+    height: 400px;
+  }
+  .heroHome .container .caption,
+  .fitur .container .caption {
+    width: 100%;
+    margin: 10px 0;
+    padding: 50px 20px;
+  }
+  .heroHome .container .caption h1,
+  .fitur .container .caption h1 {
+    font-size: 2rem;
+  }
+  .heroHome .container .caption p,
+  .fitur .container .caption p {
+    font-size: 1.1rem;
+  }
+  .heroHome .container {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+  .fitur .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
   .containerNavMobile {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -779,10 +903,6 @@ header .container nav ul li a:hover {
 }
 
 @media (max-width: 650px) {
-  section,
-  header {
-    padding: 0 50px;
-  }
   .containerNavMobile .navMobile {
     width: 70%;
   }
