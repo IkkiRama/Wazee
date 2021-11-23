@@ -818,6 +818,104 @@ footer .container {
   color: rgba(74, 75, 76, 0.75);
 }
 
+.heroPartner {
+  width: 100%;
+  height: 100%;
+}
+
+.heroPartner .container {
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  background-color: var(--hijau);
+}
+
+.heroPartner .container h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.heroPartner .container h1 span {
+  color: #ffa011;
+}
+
+.heroPartner .container img {
+  width: auto;
+  height: 70px;
+}
+
+.fiturPartner .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fiturPartner .container .perPartner {
+  height: 400px;
+  width: calc(90%/3);
+  margin: 0 10px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  position: relative;
+  background-color: var(--biru);
+}
+
+.fiturPartner .container .perPartner h2 {
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.fiturPartner .container .perPartner p {
+  font-weight: 450;
+}
+
+.fiturPartner .container .perPartner img {
+  width: auto;
+  height: 50px;
+}
+
+.fiturPartner .container .perPartner .btn {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  text-align: center;
+}
+
+.fiturPartner .container .perPartner .btn a {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--putih);
+}
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1500px;
