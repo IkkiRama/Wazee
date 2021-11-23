@@ -110,6 +110,10 @@ body {
   padding-top: 50px;
 }
 
+.mt-20 {
+  margin-top: 20px;
+}
+
 section,
 footer {
   padding: 0 100px;
@@ -187,8 +191,9 @@ header .container nav ul li a:hover {
 }
 
 .auth a:last-child {
+  color: #302f2f;
   margin-left: 5px;
-  background-color: #6C757D;
+  background-color: #F2F0F5;
 }
 
 .auth a {
@@ -196,7 +201,7 @@ header .container nav ul li a:hover {
   font-weight: 550;
   padding: 9px 20px;
   border-radius: 5px;
-  background-color: #0077F6;
+  background-color: #8D39FA;
 }
 
 .menu {
@@ -383,8 +388,6 @@ header .container nav ul li a:hover {
   background-color: var(--putih-900);
   background-position: center;
   background-size: cover;
-  -o-object-fit: cover;
-     object-fit: cover;
   background-repeat: no-repeat;
 }
 
@@ -541,6 +544,14 @@ header .container nav ul li a:hover {
   margin-bottom: 40px;
 }
 
+.full .container a {
+  color: #302f2f;
+  padding: 15px 30px;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: var(--putih);
+}
+
 .containerTestimoni {
   text-align: center;
 }
@@ -575,7 +586,7 @@ header .container nav ul li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #1D247B;
+  background-color: #8D39FA;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
@@ -820,79 +831,67 @@ footer .container {
 
 .heroPartner {
   width: 100%;
-  height: 100%;
+  height: 80vh;
 }
 
 .heroPartner .container {
-  padding: 50px;
+  padding: 30px;
+  background-color: var(--biru);
+  background-image: url("../img/partner/header-background.svg");
+  background-position: center;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.heroPartner .container .caption {
+  width: 45%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 10px;
-  background-color: var(--hijau);
 }
 
-.heroPartner .container h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 50px;
+.heroPartner .container .caption h1 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.heroPartner .container h1 span {
-  color: #ffa011;
+.heroPartner .container .caption p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 
-.heroPartner .container img {
-  width: auto;
-  height: 70px;
+.heroPartner .container .caption a {
+  color: #fff;
+  border-radius: 7px;
+  padding: 10px 25px;
+  background-color: #8D39FA;
 }
 
-.fiturPartner .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.fiturPartner .container .perPartner {
-  height: 400px;
-  width: calc(90%/3);
-  margin: 0 10px;
-  padding: 30px 20px;
-  border-radius: 10px;
-  position: relative;
-  background-color: var(--biru);
-}
-
-.fiturPartner .container .perPartner h2 {
-  font-weight: 700;
-  margin: 10px 0;
-}
-
-.fiturPartner .container .perPartner p {
-  font-weight: 450;
-}
-
-.fiturPartner .container .perPartner img {
-  width: auto;
-  height: 50px;
-}
-
-.fiturPartner .container .perPartner .btn {
-  width: 90%;
+.heroPartner .container .img {
+  width: 55%;
+  height: 100%;
+  background-color: transparent;
+  background-image: url("../img/partner/bg_slider.png");
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -902,18 +901,67 @@ footer .container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  text-align: center;
+  position: relative;
+  z-index: 9999;
 }
 
-.fiturPartner .container .perPartner .btn a {
+.heroPartner .container .img img {
+  width: 75%;
+  height: 81%;
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+}
+
+.partnerPerusahaan {
   width: 100%;
-  padding: 15px;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.partnerPerusahaan .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: var(--border);
+}
+
+.partnerPerusahaan .container img {
+  height: 60px;
+  width: auto;
+}
+
+.heroCarpool .container .caption {
+  width: 50%;
+  margin: 0;
+  color: #fff;
+  background-color: var(--hijau);
+}
+
+.heroCarpool .container .caption .btn {
+  margin-top: 70px;
+}
+
+.heroCarpool .container .caption .btn a {
+  color: #302f2f;
+  padding: 15px 30px;
+  font-weight: 600;
   border-radius: 10px;
   background-color: var(--putih);
+}
+
+.heroCarpool .container .img {
+  width: 50%;
+  margin-left: 20px;
+  background-image: url("../img/partner/wazeeCarpool.jpg");
 }
 
 @media (min-width: 1500px) {

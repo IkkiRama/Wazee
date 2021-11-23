@@ -72,96 +72,51 @@
     </nav>
 
     <main>
-
         <section class="heroPartner pt-15-vh">
             <div class="container">
-                <div class="caption">
-                    <h1>Berpartner dengan WaZee</h1>
-                    <p>Nikmati berbagai fitur menarik di Wazee dengan menjadi partner kami</p>
-                    <a href="">Jelajahi</a>
+                <h1>Berpartner dengan Wa<span>Zee</span></h1>
+                <div class="imgHero">
+                    <img src="img/ilustrasi/mobil_ijo_keren.svg" alt="img hero">
+                    <img src="img/ilustrasi/mobilPutih.svg" alt="img hero">
+                    <img src="img/ilustrasi/mobilBiruPakeTopi.svg" alt="img hero">
+                    <img src="img/ilustrasi/mobilBiru.svg" alt="img hero">
+                    <img src="img/ilustrasi/mobilOren.svg" alt="img hero">
                 </div>
-                <div class="img">
-                    <img src="img/partner/slider1.webp" alt="img slider">
-                </div>
-                <!-- <img src="img/partner/bg_slider.png" alt="img"> -->
             </div>
         </section>
 
-        <section class="partnerPerusahaan">
+
+        <section class="fiturPartner pt-50">
             <div class="container">
-                <img src="img/partner/perusahaan1.webp" alt="img perusahaan">
-                <img src="img/partner/perusahaan2.webp" alt="img perusahaan">
-                <img src="img/partner/perusahaan3.webp" alt="img perusahaan">
-                <img src="img/partner/perusahaan4.webp" alt="img perusahaan">
-                <img src="img/partner/perusahaan5.webp" alt="img perusahaan">
-                <img src="img/partner/perusahaan6.webp" alt="img perusahaan">
-            </div>
-        </section>
-
-
-        <section class="full pt-50">
-            <div class="container" style="
-            background-color: #963EFF; color:#fff;">
-                <img src="img/partner/data.png" alt="im data">
-                <h1>Waze Berbagi Data</h1>
-                <p>
-                    Pertukaran data dua arah kami membuka komunikasi langsung antara kota dan pengemudi, dengan kota
-                    menerima informasi kemacetan dan insiden eksklusif secara real-time, serta pengemudi menerima
-                    pemberitahuan awal mengenai konstruksi, kecelakaan, dan penutupan jalan.
-                </p>
-                <a href="">Bergabung menjadi partner</a>
-            </div>
-        </section>
-
-        <section class="heroHome heroCarpool fitur pt-50">
-            <div class="container">
-                <div class="caption">
-                    <h1>Waze Carpool</h1>
-                    <p>
-                        Nebeng adalah salah satu skenario yang menguntungkan banyak pihak. Nebeng dapat mengurangi
-                        kemacetan, mengurangi biaya perjalanan, menghemat bahan bakar, bahkan membantu melestarikan
-                        planet ini. Pelajari lebih lanjut cara menghadirkan nebeng di komunitas Anda.
-                    </p>
+                <div class="perPartner">
+                    <img src="img/partner/Asset 2.svg" alt="img partner">
+                    <h2>Partner Development</h2>
+                    <p>Mari bekerjasama menanggulangi kemacetan dan meningkatkan keselamatan di kota Anda</p>
                     <div class="btn">
-                        <a href="">Ayo nebeng</a>
+                        <a href="">Pelajari lebih lanjut</a>
                     </div>
                 </div>
-                <div class="img"></div>
-            </div>
-        </section>
 
+                <div class="perPartner">
+                    <img src="img/partner/Asset 3.svg" alt="img partner">
+                    <h2>Partner Jurnalistik</h2>
+                    <p>Tulis artikel yang bermanfaat bagi sesama pengguna guna meningkatkan kesadaran dan meminimalisir
+                        kecelakaan</p>
+                    <div class="btn">
+                        <a href="">Pelajari lebih lanjut</a>
+                    </div>
+                </div>
 
-
-
-        <section class="full pt-50">
-            <div class="container" style="
-            background-color: #33CCFF; color:#fff;">
-                <img src="img/partner/penyiar.png" alt="img">
-                <h1>Waze + Penyiar</h1>
-                <p>
-                    Tunjukkan kepada audiens titik masalah kemacetan dan perubahan rute yang membantu secara real time.
-                    Integrasikan secara lancar Peta Lalu Lintas Waze pada situs Anda. Gunakan data lalu lintas kami
-                    untuk
-                    melihat yang terjadi di jalan 7x24 jam, mulai dari kemacetan lalu lintas hingga penutupan jalan.
-                    Lakukan semuanya tanpa helikopter.
-                </p>
-                <a href="">Ayo daftar sekarang</a>
-            </div>
-        </section>
-
-        <section class="full pt-50">
-            <div class="container">
-                <img src="img/partner/img_cta.png" alt="img">
-                <h1>Siap menjadi partner atau sudah menjadi partner?</h1>
-                <div class="cta-btn mt-20">
-                    <a href="">Daftar</a>
-                    <a href="">Login</a>
+                <div class="perPartner">
+                    <img src="img/partner/Asset 5.svg" alt="img partner">
+                    <h2>Partner Carpool</h2>
+                    <p>Upgrade cara abda bepergian menggunakan WaZee Carpool.</p>
+                    <div class="btn">
+                        <a href="">Pelajari lebih lanjut</a>
+                    </div>
                 </div>
             </div>
         </section>
-
-
-
 
         <section class="footer">
             <div class="container">
@@ -239,18 +194,94 @@
         </div>
     </footer>
 
+    .heroPartner {
+    width: 100%;
+    height: 100%;
+
+    .container {
+    padding: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: var(--hijau);
+
+    h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+
+    span {
+    color: rgb(255, 160, 17);
+    }
+    }
+
+    img {
+    width: auto;
+    height: 70px;
+    }
+    }
+    }
 
 
-    <!-- Kemitraan Produk
-
-    Baik mengintegrasikan dengan mobil atau dengan aplikasi musik favorit, cari tahu bagaimana kami bekerja sama dengan
-    partner produk kami untuk menjadikan Waze lebih baik.
 
 
-    Waze untuk Kota
 
-    Mulai dari penutupan jalan sampai kontrol lalu lintas khusus acara, pelajari bagaimana pertukaran data dua arah kami
-    membantu memastikan kota terus mendapatkan informasi dan lalu lintas tetap lancar. -->
+    .fiturPartner {
+
+    .container {
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+
+    .perPartner {
+    height: 400px;
+    width: calc(90%/3);
+    margin: 0 10px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    position: relative;
+    background-color: var(--biru);
+
+    h2 {
+    font-weight: 700;
+    margin: 10px 0;
+    }
+
+    p {
+    font-weight: 450;
+    }
+
+    img {
+    width: auto;
+    height: 50px;
+    }
+
+    .btn {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    text-align: center;
+    // transform: translateY(100px);
+
+    a {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--putih);
+    }
+    }
+    }
+    }
+    }
+
 
     <script defer src="js/script.js"></script>
 
