@@ -89,6 +89,7 @@
     font-family: "Poppins", sans-serif, serif;
     word-wrap: break-word;
     scroll-behavior: smooth;
+    font-display: swap;
 }
 
 
@@ -119,9 +120,16 @@ body {
 }
 
 section,
+article,
 footer {
     padding: 0 100px;
 }
+
+
+// .img-svg {
+//     width: 65px;
+//     height: 65px;
+// }
 
 header {
     width: 100%;
@@ -148,7 +156,8 @@ header {
                 font-weight: 800;
 
                 span {
-                    color: rgb(255, 160, 17);
+                    // color: var(--biru);
+                    // color: rgb(255, 160, 17);
                 }
             }
 
@@ -745,7 +754,8 @@ footer {
         display: flex;
         align-items: center;
         justify-content: start;
-        color: rgba(74, 75, 76, 0.75);
+        color: #302f2f;
+        // color: rgba(74, 75, 76, 0.75);
     }
 }
 
@@ -792,7 +802,7 @@ footer {
         display: flex;
 
         .caption {
-            width: 45%;
+            width: 55%;
             height: 100%;
             display: flex;
             align-items: flex-start;
@@ -821,15 +831,10 @@ footer {
         }
 
         .img {
-            width: 55%;
+            width: 45%;
             height: 100%;
-            background-color: transparent;
-            background-image: url("../img/partner/bg_slider.png");
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            z-index: 9999;
+            background-image: url("../img/partner/slider1.webp");
+            border-radius: 10px;
             // object-fit: contain;
 
             img {
@@ -873,8 +878,11 @@ footer {
         .caption {
             width: 50%;
             margin: 0;
-            color: #fff;
             background-color: var(--hijau);
+
+            p {
+                line-height: 30px;
+            }
 
             .btn {
                 margin-top: 70px;
@@ -896,6 +904,100 @@ footer {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// per Artikel
+article {
+    padding-top: 18vh;
+
+    .container {
+
+        h1 {
+            font-size: 2.4rem;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 1rem 0;
+        }
+
+        img {
+            width: 100%;
+            height: 500px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .penulis {
+            font-size: 1rem;
+            color: #302f2f;
+            margin-bottom: 20px;
+        }
+
+        .main {
+            display: flex;
+            align-items: start;
+
+            .tulisan {
+                width: 60%;
+
+                p {
+                    margin: 5px 0;
+                    letter-spacing: .5px;
+                    line-height: 30px;
+                }
+            }
+
+            .keterangan {
+                width: 40%;
+                position: sticky;
+                top: 15vh;
+                margin-left: 20px;
+                align-self: flex-start;
+            }
+        }
+    }
+}
+
 
 
 
@@ -967,6 +1069,7 @@ footer {
     }
 
     section,
+    article,
     footer,
     header {
         display: flex;
@@ -999,6 +1102,7 @@ footer {
     }
 
     section,
+    article,
     header {
         padding: 0 50px;
     }
@@ -1079,6 +1183,7 @@ footer {
 @media (max-width:450px) {
 
     section,
+    article,
     header {
         padding: 0 25px;
     }
@@ -1087,6 +1192,7 @@ footer {
 @media (max-width:350px) {
 
     section,
+    article,
     header {
         padding: 0 15px;
     }

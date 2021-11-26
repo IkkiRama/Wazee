@@ -86,6 +86,7 @@
   font-family: "Poppins", sans-serif, serif;
   word-wrap: break-word;
   scroll-behavior: smooth;
+  font-display: swap;
 }
 
 body {
@@ -115,6 +116,7 @@ body {
 }
 
 section,
+article,
 footer {
   padding: 0 100px;
 }
@@ -156,10 +158,6 @@ header .container .logo h1 {
   font-size: 1.7rem;
   margin-left: 10px;
   font-weight: 800;
-}
-
-header .container .logo h1 span {
-  color: #ffa011;
 }
 
 header .container .logo img {
@@ -826,7 +824,7 @@ footer .container {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  color: rgba(74, 75, 76, 0.75);
+  color: #302f2f;
 }
 
 .heroPartner {
@@ -850,7 +848,7 @@ footer .container {
 }
 
 .heroPartner .container .caption {
-  width: 45%;
+  width: 55%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -888,21 +886,10 @@ footer .container {
 }
 
 .heroPartner .container .img {
-  width: 55%;
+  width: 45%;
   height: 100%;
-  background-color: transparent;
-  background-image: url("../img/partner/bg_slider.png");
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  z-index: 9999;
+  background-image: url("../img/partner/slider1.webp");
+  border-radius: 10px;
 }
 
 .heroPartner .container .img img {
@@ -942,8 +929,11 @@ footer .container {
 .heroCarpool .container .caption {
   width: 50%;
   margin: 0;
-  color: #fff;
   background-color: var(--hijau);
+}
+
+.heroCarpool .container .caption p {
+  line-height: 30px;
 }
 
 .heroCarpool .container .caption .btn {
@@ -964,11 +954,70 @@ footer .container {
   background-image: url("../img/partner/wazeeCarpool.jpg");
 }
 
+article {
+  padding-top: 18vh;
+}
+
+article .container h1 {
+  font-size: 2.4rem;
+}
+
+article .container h2,
+article .container h3,
+article .container h4,
+article .container h5,
+article .container h6 {
+  margin: 1rem 0;
+}
+
+article .container img {
+  width: 100%;
+  height: 500px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+article .container .penulis {
+  font-size: 1rem;
+  color: #302f2f;
+  margin-bottom: 20px;
+}
+
+article .container .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+article .container .main .tulisan {
+  width: 60%;
+}
+
+article .container .main .tulisan p {
+  margin: 5px 0;
+  letter-spacing: .5px;
+  line-height: 30px;
+}
+
+article .container .main .keterangan {
+  width: 40%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15vh;
+  margin-left: 20px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1500px;
   }
   section,
+  article,
   footer,
   header {
     display: -webkit-box;
@@ -990,6 +1039,7 @@ footer .container {
     font-size: 1.1rem;
   }
   section,
+  article,
   header {
     padding: 0 50px;
   }
@@ -1056,6 +1106,7 @@ footer .container {
 
 @media (max-width: 450px) {
   section,
+  article,
   header {
     padding: 0 25px;
   }
@@ -1063,6 +1114,7 @@ footer .container {
 
 @media (max-width: 350px) {
   section,
+  article,
   header {
     padding: 0 15px;
   }
