@@ -63,13 +63,14 @@
 }
 
 :root {
+  --hitam-santai: #302f2f;
   --putih: #fff;
   --putih-f2: #f2f2f2;
+  --putih-900: #F2F4F7;
   --ungu: #963EFF;
   --kuning: #FCE354;
   --biru: #33CCFF;
   --hijau: #1EE592;
-  --putih-900: #F2F4F7;
   --border: 2px solid #e4e4e7;
 }
 
@@ -111,14 +112,104 @@ body {
   padding-top: 50px;
 }
 
+.pb-50 {
+  padding-bottom: 50px;
+}
+
 .mt-20 {
   margin-top: 20px;
 }
 
+.white {
+  color: var(--putih);
+}
+
 section,
-article,
 footer {
   padding: 0 100px;
+}
+
+p,
+span,
+strong,
+b,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--hitam-santai);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+form .form-group {
+  width: 100%;
+  position: relative;
+}
+
+form .form-group .input-group {
+  margin-top: 20px;
+}
+
+form .form-group .input-group button {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+form .form-group .input-group input {
+  margin: 0;
+}
+
+form .form-group label {
+  margin: 5px 0;
+}
+
+form .form-group textarea,
+form .form-group input {
+  width: 100%;
+  resize: none;
+  cursor: text;
+  padding: 10px 20px;
+  margin: 10px 0;
+  color: #302f2f;
+  font-size: .9rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border: 1px solid #e4e4e7;
+  background-color: var(--putih);
+  letter-spacing: .5px;
+}
+
+form .form-group textarea:focus,
+form .form-group input:focus {
+  outline: 2px solid #0176f4bd;
+}
+
+form button {
+  width: 100%;
+  color: #fff;
+  padding: 12px 0;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: .5rem;
+  background-color: #1352FF;
+}
+
+form button:focus {
+  outline: 2px solid #63aeffbd;
 }
 
 header {
@@ -199,7 +290,7 @@ header .container nav ul li a:hover {
   font-weight: 550;
   padding: 9px 20px;
   border-radius: 5px;
-  background-color: #8D39FA;
+  background-color: #1352FF;
 }
 
 .menu {
@@ -572,7 +663,6 @@ header .container nav ul li a:hover {
   width: calc(94%/3);
   padding: 20px;
   margin: 10px;
-  color: #fff;
   border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -590,12 +680,14 @@ header .container nav ul li a:hover {
 }
 
 .containerTestimoni .container .testimoni .perTestimoni h2 {
+  color: #fff;
   font-size: 1.3rem;
   margin-top: 20px;
   margin-bottom: 5px;
 }
 
 .containerTestimoni .container .testimoni .perTestimoni span {
+  color: #fff;
   font-size: .9rem;
   margin-top: 3px;
 }
@@ -607,6 +699,7 @@ header .container nav ul li a:hover {
 }
 
 .containerTestimoni .container .testimoni .perTestimoni p {
+  color: #fff;
   margin-top: 1rem !important;
   font-weight: 500;
   line-height: 20px;
@@ -704,6 +797,7 @@ header .container nav ul li a:hover {
 .heroFlavor2 {
   width: 100%;
   height: 70vh;
+  overflow: hidden;
 }
 
 .heroFlavor2 .container {
@@ -727,6 +821,7 @@ header .container nav ul li a:hover {
 .heroFlavor2 .container .flavor2 .caption {
   width: 100%;
   height: 100%;
+  padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -740,7 +835,6 @@ header .container nav ul li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 30px;
   position: relative;
   z-index: 9999999;
 }
@@ -768,6 +862,8 @@ header .container nav ul li a:hover {
   width: 50%;
   height: 100%;
   position: absolute;
+  top: 0;
+  bottom: 0;
   right: -10px;
   border-radius: 10px;
   -webkit-transform-origin: center top;
@@ -781,9 +877,10 @@ header .container nav ul li a:hover {
 .heroFlavor2 .container .flavor1 .bg {
   width: 60%;
   height: 100%;
-  position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
+  position: absolute;
+  border-radius: 10px;
   background-color: var(--ungu);
 }
 
@@ -954,62 +1051,183 @@ footer .container {
   background-image: url("../img/partner/wazeeCarpool.jpg");
 }
 
-article {
+.artikel {
   padding-top: 18vh;
 }
 
-article .container h1 {
-  font-size: 2.4rem;
-}
-
-article .container h2,
-article .container h3,
-article .container h4,
-article .container h5,
-article .container h6 {
-  margin: 1rem 0;
-}
-
-article .container img {
-  width: 100%;
-  height: 500px;
-  margin: 20px 0;
-  border-radius: 10px;
-}
-
-article .container .penulis {
-  font-size: 1rem;
-  color: #302f2f;
-  margin-bottom: 20px;
-}
-
-article .container .main {
+.artikel .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
 }
 
-article .container .main .tulisan {
-  width: 60%;
+.artikel .container .containerArtikel,
+.artikel .container article {
+  -webkit-box-flex: 2.5;
+      -ms-flex: 2.5;
+          flex: 2.5;
+  margin-right: 1rem;
 }
 
-article .container .main .tulisan p {
-  margin: 5px 0;
-  letter-spacing: .5px;
+.artikel .container .containerArtikel h1,
+.artikel .container article h1 {
+  font-size: 2rem;
+}
+
+.artikel .container .containerArtikel .penulis,
+.artikel .container article .penulis {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.artikel .container .containerArtikel img,
+.artikel .container article img {
+  width: 100%;
+  height: 450px;
+  margin: 20px 0;
+  border-radius: 10px;
+  background-color: var(--putih-900);
+}
+
+.artikel .container .containerArtikel p,
+.artikel .container article p {
   line-height: 30px;
 }
 
-article .container .main .keterangan {
-  width: 40%;
+.artikel .container .containerArtikel .daftarArtikel .perArtikel,
+.artikel .container article .daftarArtikel .perArtikel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+}
+
+.artikel .container .containerArtikel .daftarArtikel .perArtikel:hover h1,
+.artikel .container article .daftarArtikel .perArtikel:hover h1 {
+  color: #1352FF;
+}
+
+.artikel .container .containerArtikel .daftarArtikel .perArtikel img,
+.artikel .container article .daftarArtikel .perArtikel img {
+  width: 225px;
+  height: 170px;
+  margin-right: 20px;
+}
+
+.artikel .container .containerArtikel .daftarArtikel .perArtikel h1,
+.artikel .container article .daftarArtikel .perArtikel h1 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.artikel .container .containerArtikel .main h2,
+.artikel .container .containerArtikel .main h3,
+.artikel .container .containerArtikel .main h4,
+.artikel .container .containerArtikel .main h5,
+.artikel .container .containerArtikel .main h6,
+.artikel .container article .main h2,
+.artikel .container article .main h3,
+.artikel .container article .main h4,
+.artikel .container article .main h5,
+.artikel .container article .main h6 {
+  margin: 1rem 0;
+}
+
+.artikel .container .containerArtikel .komentar .perKomentar,
+.artikel .container article .komentar .perKomentar {
+  margin: 20px 0;
+}
+
+.artikel .container .containerArtikel .komentar .perKomentar .profile,
+.artikel .container article .komentar .perKomentar .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.artikel .container .containerArtikel .komentar .perKomentar .profile img,
+.artikel .container article .komentar .perKomentar .profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+  background-color: var(--putih-900);
+}
+
+.artikel .container .rekomendasi {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100vh;
   position: -webkit-sticky;
   position: sticky;
-  top: 15vh;
-  margin-left: 20px;
+  top: 12vh;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  padding: 20px;
+}
+
+.artikel .container .rekomendasi h1 {
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: var(--border);
+}
+
+.artikel .container .rekomendasi .perRekomendasiArtikel {
+  margin: 3px;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: var(--border);
+}
+
+.artikel .container .rekomendasi .perRekomendasiArtikel:hover h2 {
+  color: #1352FF;
+}
+
+.artikel .container .rekomendasi .perRekomendasiArtikel:last-child {
+  border-bottom: none;
+}
+
+.artikel .container .rekomendasi .perRekomendasiArtikel img {
+  width: 100px;
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.artikel .container .rekomendasi .perRekomendasiArtikel h2 {
+  font-size: .9rem;
+  line-height: 20px;
+}
+
+.artikel .container .rekomendasi .kategori .daftarKategori {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.artikel .container .rekomendasi .kategori .daftarKategori a {
+  margin: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: var(--border);
+}
+
+.artikel .container .rekomendasi .kategori .daftarKategori a:hover {
+  background-color: #F2F0F5;
 }
 
 @media (min-width: 1500px) {
@@ -1017,7 +1235,6 @@ article .container .main .keterangan {
     max-width: 1500px;
   }
   section,
-  article,
   footer,
   header {
     display: -webkit-box;
@@ -1039,7 +1256,6 @@ article .container .main .keterangan {
     font-size: 1.1rem;
   }
   section,
-  article,
   header {
     padding: 0 50px;
   }
@@ -1106,7 +1322,6 @@ article .container .main .keterangan {
 
 @media (max-width: 450px) {
   section,
-  article,
   header {
     padding: 0 25px;
   }
@@ -1114,7 +1329,6 @@ article .container .main .keterangan {
 
 @media (max-width: 350px) {
   section,
-  article,
   header {
     padding: 0 15px;
   }
