@@ -121,6 +121,14 @@ body {
   padding-bottom: 50px;
 }
 
+.m-0 {
+  margin: 0 !important;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
 .mt-20 {
   margin-top: 20px;
 }
@@ -221,7 +229,7 @@ form .form-group input:focus {
 
 form button {
   width: 100%;
-  color: #fff;
+  color: var(--putih);
   padding: 12px 0;
   font-weight: 500;
   font-size: 1.1rem;
@@ -238,11 +246,11 @@ header {
   height: 11vh;
   max-height: 100%;
   position: fixed;
-  z-index: 99999999999999999999999999999999999999999999999999999999;
   background-color: var(--putih);
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  padding: 10px 100px;
+  padding: 0 100px;
+  z-index: 99999999999999999999999999999999999999999999999999999999;
 }
 
 header .container {
@@ -316,7 +324,7 @@ header .container nav ul li a:hover {
 
 .menu {
   width: 35px;
-  height: 25px;
+  height: 30px;
   display: none;
   cursor: pointer;
   -webkit-box-align: end;
@@ -337,10 +345,10 @@ header .container nav ul li a:hover {
   height: 100%;
   position: absolute;
   top: 0;
+  left: 0;
   bottom: 0;
   opacity: 0;
   z-index: 999999999999999999999999999999999;
-  cursor: pointer;
 }
 
 .menu input:checked ~ span:nth-child(2) {
@@ -476,6 +484,8 @@ header .container nav ul li a:hover {
   font-size: 1.3rem;
   font-weight: 400;
   margin-bottom: 50px;
+  line-height: 30px;
+  font-weight: 500;
 }
 
 .heroHome .container .img {
@@ -520,98 +530,16 @@ header .container nav ul li a:hover {
   background-image: url("../img/home/orangDiMobil.jpg");
 }
 
-.heroFlavor {
-  height: 70vh;
-  vertical-align: baseline;
-}
-
-.heroFlavor .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
-.heroFlavor .container .flavor {
+.heroHome2 .container .caption {
   width: 50%;
-  height: 100%;
-  border-radius: 10px;
-  margin-right: 20px;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: var(--ungu);
+  margin-left: 20px;
+  background-color: var(--hijau);
 }
 
-.heroFlavor .container .flavor .caption {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 30px;
-  position: relative;
-  z-index: 9999999;
-}
-
-.heroFlavor .container .flavor .caption h1 {
-  color: var(--putih);
-  font-size: 2.4rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-.heroFlavor .container .flavor .caption p {
-  color: var(--putih);
-  font-size: 1.3rem;
-}
-
-.heroFlavor .container .flavor::before {
-  content: '';
+.heroHome2 .container .img {
+  margin-left: 0;
   width: 50%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  border-radius: 10px;
-  -webkit-transform-origin: center top;
-          transform-origin: center top;
-  -webkit-transform: skewX(20deg);
-          transform: skewX(20deg);
-  background-color: var(--ungu);
-}
-
-.heroFlavor .container .flavor img {
-  position: absolute;
-  left: 55px;
-  bottom: -10px;
-}
-
-.heroFlavor .container .containerImg {
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.heroFlavor .container .containerImg .img {
-  width: 100%;
-  height: 100%;
-  -webkit-transform-origin: center top;
-          transform-origin: center top;
-  -webkit-transform: skewX(20deg);
-          transform: skewX(20deg);
-  border-radius: 10px;
-  background-image: url("../img/home/hero1.jpg");
+  background-image: url("../img/home/hero.jpg");
 }
 
 .full {
@@ -652,6 +580,8 @@ header .container nav ul li a:hover {
 .full .container p {
   font-size: 1.3rem;
   margin-bottom: 40px;
+  font-weight: 500;
+  line-height: 35px;
 }
 
 .full .container a {
@@ -701,29 +631,30 @@ header .container nav ul li a:hover {
 }
 
 .containerTestimoni .container .testimoni .perTestimoni h2 {
-  color: #fff;
+  color: var(--putih);
   font-size: 1.3rem;
   margin-top: 20px;
   margin-bottom: 5px;
 }
 
 .containerTestimoni .container .testimoni .perTestimoni span {
-  color: #fff;
+  color: var(--putih);
   font-size: .9rem;
-  margin-top: 3px;
 }
 
 .containerTestimoni .container .testimoni .perTestimoni img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
 }
 
 .containerTestimoni .container .testimoni .perTestimoni p {
-  color: #fff;
+  color: var(--putih);
   margin-top: 1rem !important;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 25px;
 }
 
 .footer {
@@ -779,13 +710,13 @@ header .container nav ul li a:hover {
   text-decoration: underline;
 }
 
-.footer .container .box .sosmed {
+.sosmed {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.footer .container .box .sosmed .persosmed {
+.sosmed .persosmed {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -806,11 +737,11 @@ header .container nav ul li a:hover {
   transition: 1s;
 }
 
-.footer .container .box .sosmed .persosmed svg {
+.sosmed .persosmed svg {
   font-size: .1rem;
 }
 
-.footer .container .box .sosmed .persosmed:hover {
+.sosmed .persosmed:hover {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
@@ -984,20 +915,20 @@ footer .container {
 }
 
 .heroPartner .container .caption h1 {
-  color: #fff;
+  color: var(--putih);
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
 .heroPartner .container .caption p {
-  color: #fff;
+  color: var(--putih);
   font-weight: 400;
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
 
 .heroPartner .container .caption a {
-  color: #fff;
+  color: var(--putih);
   border-radius: 7px;
   padding: 10px 25px;
   background-color: #8D39FA;
@@ -1364,18 +1295,44 @@ footer .container {
   }
 }
 
+@media (max-width: 1200px) {
+  .containerTestimoni .container .testimoni .perTestimoni {
+    height: 650px;
+  }
+}
+
 @media (max-width: 1100px) {
-  .heroHome .container .caption h1,
-  .fitur .container .caption h1 {
-    font-size: 2rem;
-  }
-  .heroHome .container .caption p,
-  .fitur .container .caption p {
-    font-size: 1.1rem;
-  }
   section,
   header {
     padding: 0 50px;
+  }
+  .heroHome {
+    max-height: 800px;
+  }
+  .heroHome .container .caption {
+    width: 50%;
+  }
+  .heroHome .container .caption h1 {
+    font-size: 1.9rem;
+  }
+  .heroHome .container .caption p {
+    line-height: 30px;
+  }
+  .heroHome .container .img {
+    width: 50%;
+  }
+  .fitur .container .caption h1 {
+    font-size: 2rem;
+  }
+  .fitur .container .caption p {
+    font-size: 1.1rem;
+  }
+  .containerTestimoni .container .testimoni .perTestimoni {
+    width: calc(100%/2);
+    height: 600px;
+  }
+  .containerTestimoni .container .testimoni .perTestimoni:last-child {
+    display: none;
   }
 }
 
@@ -1389,39 +1346,36 @@ footer .container {
     display: -ms-flexbox;
     display: flex;
   }
-  .heroHome,
-  .fitur {
+  .heroHome {
     height: 100%;
+    max-height: 100%;
   }
-  .heroHome .container,
-  .fitur .container {
+  .heroHome .container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .heroHome .container .img,
-  .fitur .container .img {
+  .heroHome .container .img {
     width: 100%;
     height: 400px;
+    margin: 0;
   }
-  .heroHome .container .caption,
-  .fitur .container .caption {
+  .heroHome .container .caption {
     width: 100%;
     margin: 10px 0;
     padding: 50px 20px;
   }
-  .heroHome .container .caption h1,
-  .fitur .container .caption h1 {
+  .heroHome .container .caption h1 {
     font-size: 2rem;
   }
-  .heroHome .container .caption p,
-  .fitur .container .caption p {
+  .heroHome .container .caption p {
     font-size: 1.1rem;
   }
   .heroHome .container {
     -ms-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;
   }
-  .fitur .container {
+  .fitur .container,
+  .heroHome2 .container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -1430,11 +1384,82 @@ footer .container {
     display: -ms-flexbox;
     display: flex;
   }
+  .full .container h1 {
+    font-size: 2rem;
+  }
+  .containerTestimoni .container .testimoni .perTestimoni {
+    height: 700px;
+  }
+}
+
+@media (max-width: 700px) {
+  .containerTestimoni .container h1 {
+    font-size: 1.8rem;
+  }
+  .containerTestimoni .container .testimoni {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .containerTestimoni .container .testimoni .perTestimoni {
+    width: 100%;
+    height: 100%;
+    margin: 10px 0;
+    padding: 20px 20px 50px 20px;
+  }
+  .containerTestimoni .container .testimoni .perTestimoni:last-child {
+    display: inline-block;
+  }
 }
 
 @media (max-width: 650px) {
+  section,
+  header {
+    padding: 0 25px;
+  }
   .containerNavMobile .navMobile {
     width: 70%;
+  }
+  .heroHome .container .img {
+    height: 350px;
+  }
+  .heroHome .container .caption {
+    padding: 40px 20px;
+  }
+  .heroHome .container .caption h1 {
+    font-size: 1.9rem;
+  }
+  .heroHome .container .caption p {
+    font-size: 1.1rem;
+  }
+  .pt-50 {
+    padding-top: 15px;
+  }
+  .full .container h1 {
+    font-size: 1.5rem;
+  }
+  .full .container p {
+    font-size: 1rem;
+    line-height: 27px;
+  }
+  .full .container a {
+    font-size: .9rem;
+    padding: 10px 15px;
+  }
+  footer {
+    height: 100%;
+    padding: 20px 0;
+  }
+  footer .container {
+    font-size: .9rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .containerTestimoni .container h1 {
+    font-size: 1.3rem;
   }
 }
 
@@ -1453,6 +1478,58 @@ footer .container {
   .containerNavMobile .navMobile {
     width: 100%;
   }
+  .heroHome .container .img {
+    height: 250px;
+  }
+  .heroHome .container .caption h1 {
+    font-size: 1.4rem;
+  }
+  .heroHome .container .caption p {
+    font-size: 1rem;
+  }
+  .full .container h1 {
+    font-size: 1.5rem;
+  }
+  .full .container p {
+    font-size: 1rem;
+    line-height: 25px;
+  }
+  .full .container a {
+    width: 100%;
+    font-size: .9rem;
+    padding: 10px;
+  }
+  .containerTestimoni .container .testimoni .perTestimoni {
+    padding: 20px 20px 50px 20px;
+  }
+  .containerTestimoni .container .testimoni .perTestimoni h2 {
+    font-size: 1.2rem;
+    line-height: 25px;
+  }
+  .containerTestimoni .container .testimoni .perTestimoni img {
+    width: 100px;
+    height: 100px;
+  }
+  .containerTestimoni .container .testimoni .perTestimoni p {
+    font-size: .9rem;
+    line-height: 22px;
+  }
+  .footer .container .box h2 {
+    font-size: 1.5rem;
+  }
+  .footer .container .box p {
+    font-size: .9rem;
+  }
+  .sosmed .persosmed {
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    margin: 0 5px;
+  }
+  .sosmed .persosmed:hover {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 300px) {
@@ -1463,6 +1540,12 @@ footer .container {
   .containerNavMobile .navMobile .auth a {
     width: 100%;
     margin: 5px 0;
+  }
+  .heroHome .container .caption p {
+    line-height: 25px;
+  }
+  .containerTestimoni .container h1 {
+    font-size: 1.1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
