@@ -74,11 +74,20 @@
     --biru: #33CCFF;
     --biru-cerah: #1352FF;
     --hijau: #1EE592;
-    --border: 2px solid #e4e4e7;
     --facebook: #3b5998;
     --twitter: #55acee;
     --pinteres: #CB2027;
     --wa: #25D366;
+    --border: 2px solid #e4e4e7;
+
+
+    --border-table: 1px solid #dee2e6;
+    --table-dark: #343a40;
+    --tr: rgba(0, 0, 0, 0.05);
+
+
+    --outline-input: #0176f4bd;
+    --outline-button: #63aeffbd;
 }
 
 
@@ -106,6 +115,10 @@ body {
 .container {
     width: 100%;
     height: 100%;
+}
+
+.overflow-x-auto {
+    overflow-x: auto;
 }
 
 .pt-15-vh {
@@ -182,6 +195,35 @@ button {
 }
 
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--hitam-santai);
+    // color: #212529;
+
+    thead th {
+        color: var(--putih);
+        padding: 0.75rem;
+        background-color: var(--table-dark);
+        border-bottom: 2px solid var(--hitam-santai);
+        // vertical-align: bottom;
+    }
+
+    tbody tr {
+
+        td {
+            padding: 0.75rem;
+            // vertical-align: top;
+            border: var(--border-table);
+        }
+
+        &:hover,
+        &:nth-child(odd) {
+            background-color: var(--tr);
+        }
+    }
+}
+
 
 
 form {
@@ -231,7 +273,7 @@ form {
             letter-spacing: .5px;
 
             &:focus {
-                outline: 2px solid #0176f4bd;
+                outline: 2px solid var(--outline-input);
             }
         }
     }
@@ -246,7 +288,7 @@ form {
         background-color: var(--biru-cerah);
 
         &:focus {
-            outline: 2px solid #63aeffbd;
+            outline: 2px solid var(--outline-button);
         }
     }
 }
@@ -331,8 +373,8 @@ header {
 
 
 .menu {
-    width: 35px;
-    height: 30px;
+    width: 30px;
+    height: 20px;
     display: none;
     cursor: pointer;
     align-items: flex-end;
@@ -349,11 +391,12 @@ header {
         bottom: 0;
         opacity: 0;
         z-index: 999999999999999999999999999999999;
+        cursor: pointer;
 
         &:checked~span {
 
             &:nth-child(2) {
-                transform: rotate(45deg) translate(0, -2px);
+                transform: rotate(45deg) translate(0, -3px);
             }
 
             &:nth-child(3) {
@@ -361,7 +404,7 @@ header {
             }
 
             &:nth-child(4) {
-                transform: rotate(-45deg) translate(0, 1px);
+                transform: rotate(-45deg) translate(0, 2px);
             }
 
         }
@@ -369,7 +412,7 @@ header {
 
     span {
         width: 100%;
-        height: 5px;
+        height: 4px;
         border-radius: 10px;
         background-color: #000;
         transition: .5s;
@@ -399,6 +442,7 @@ header {
     display: none;
     justify-content: end;
     position: fixed;
+    right: 0;
     background-color: #8d8d8d38;
     transition: .5s;
     transform: translateX(120%);
@@ -1006,13 +1050,15 @@ footer {
     .container {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
         padding-bottom: 20px;
         border-bottom: var(--border);
 
         img {
             height: 60px;
             width: auto;
+            margin: 10px;
         }
     }
 }
@@ -1500,6 +1546,9 @@ footer {
         }
     }
 
+
+
+
 }
 
 @media (max-width:850px) {
@@ -1705,7 +1754,7 @@ footer {
 
     section,
     header {
-        padding: 0 25px;
+        padding: 0 15px;
     }
 
 }
@@ -1714,7 +1763,26 @@ footer {
 
     section,
     header {
-        padding: 0 15px;
+        padding: 0 10px;
+    }
+
+    header {
+
+        .container {
+
+            .logo {
+
+                h1 {
+                    font-size: 1.3rem;
+                }
+
+                img {
+                    width: 30px;
+                    height: 30px;
+
+                }
+            }
+        }
     }
 
     .containerNavMobile {
@@ -1727,12 +1795,14 @@ footer {
 
 
 
+
+
     .heroHome {
 
         .container {
 
             .img {
-                height: 250px;
+                height: 220px;
             }
 
             .caption {
