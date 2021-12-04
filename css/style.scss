@@ -1219,6 +1219,7 @@ footer {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                margin-top: 50px;
 
                 .perShare {
                     width: calc(100%/4);
@@ -1228,13 +1229,13 @@ footer {
                     justify-content: center;
 
                     &:first-child {
-                        border-top-left-radius: 10px;
-                        border-bottom-left-radius: 10px;
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
                     }
 
                     &:last-child {
-                        border-top-right-radius: 10px;
-                        border-bottom-right-radius: 10px;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
                     }
 
                     svg {
@@ -1258,7 +1259,6 @@ footer {
 
                 .perArtikel {
                     display: flex;
-                    align-items: center;
                     margin: 25px 0;
 
                     &:hover {
@@ -1569,15 +1569,28 @@ footer {
 
         .container {
 
+            article {
+                .title {
+
+                    img {
+                        height: 300px;
+                    }
+                }
+
+                .share {
+                    .perShare {
+                        padding: 10px;
+                    }
+                }
+            }
+
             .containerArtikel {
-                // flex: 1.5;
                 width: 50%;
 
                 .daftarArtikel {
 
                     .perArtikel {
                         flex-direction: column;
-                        align-items: start;
 
                         img {
                             width: 100%;
@@ -1600,6 +1613,69 @@ footer {
 
 
 
+}
+
+@media (max-width:900px) {
+    .artikel {
+
+        .container {
+            flex-wrap: wrap;
+
+            article {
+                margin-bottom: 50px;
+
+                .title img {
+                    height: 350px;
+                }
+            }
+
+            article,
+            .containerArtikel {
+                width: 100%;
+                margin-right: 0;
+
+                .daftarArtikel {
+
+                    .perArtikel {
+                        flex-direction: row;
+
+                        img {
+                            width: 40%;
+                            height: 200px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+
+            .rekomendasi {
+                width: 100%;
+                position: static;
+                padding: 0;
+
+                .rekomendasiArtikel {
+
+                    .perRekomendasiArtikel {
+
+                        img {
+                            width: 40%;
+                            height: 150px;
+                        }
+
+                        h2 {
+                            line-height: 30px;
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+
+            }
+
+            .kategori {
+                margin-top: 50px;
+            }
+        }
+    }
 }
 
 @media (max-width:850px) {
@@ -1684,54 +1760,6 @@ footer {
 
 
 
-    .artikel {
-
-        .container {
-            flex-wrap: wrap;
-
-            .containerArtikel {
-                width: 100%;
-                margin-right: 0;
-
-                .daftarArtikel {
-
-                    .perArtikel {
-
-                        img {
-                            width: 100%;
-                            height: 300px;
-                            margin-right: 0;
-                        }
-
-                        .caption {}
-                    }
-                }
-            }
-
-            .rekomendasi {
-                width: 100%;
-                position: static;
-                padding: 0;
-
-                .rekomendasiArtikel {
-
-                    .perRekomendasiArtikel {
-
-                        img {
-                            width: 30%;
-                            height: 100px;
-                        }
-
-                        h2 {
-                            line-height: 30px;
-                            font-size: 1.3rem;
-                        }
-                    }
-                }
-
-            }
-        }
-    }
 
 }
 
@@ -1758,6 +1786,80 @@ footer {
                         display: inline-block;
                     }
                 }
+            }
+        }
+    }
+
+
+
+
+
+
+    .artikel {
+
+        .container {
+
+            article {
+                .title {
+                    img {
+                        height: 300px;
+                    }
+
+                    h1 {
+                        font-size: 1.7rem;
+                    }
+                }
+
+                .main {
+
+                    h2 {
+                        font-size: 1.3rem;
+                    }
+                }
+
+                .artikelTerkait {
+                    flex-wrap: wrap;
+
+                    .perArtikelTerkait {
+                        width: calc(95%/2);
+                    }
+                }
+            }
+
+            .containerArtikel {
+
+                .daftarArtikel {
+
+                    .perArtikel {
+                        flex-direction: column;
+
+                        img {
+                            width: 100%;
+                            height: 250px;
+                            margin-right: 0;
+                        }
+
+                    }
+                }
+            }
+
+            .rekomendasi {
+
+                .rekomendasiArtikel {
+
+                    .perRekomendasiArtikel {
+
+                        img {
+                            width: 40%;
+                            height: 120px;
+                        }
+
+                        h2 {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+
             }
         }
     }
@@ -1804,11 +1906,6 @@ footer {
         }
     }
 
-    .pt-50 {
-        padding-top: 15px;
-    }
-
-
     .full .container {
 
         h1 {
@@ -1840,52 +1937,25 @@ footer {
 
 
 
+}
 
-    .artikel {
+
+
+
+@media (max-width:600px) {
+
+    .footer {
 
         .container {
 
-            .containerArtikel {
 
-                .daftarArtikel {
-
-                    .perArtikel {
-
-                        img {
-                            height: 250px;
-                            margin-right: 0;
-                        }
-
-                        .caption {}
-                    }
-                }
-            }
-
-            .rekomendasi {
-
-                .rekomendasiArtikel {
-
-                    .perRekomendasiArtikel {
-
-                        img {
-                            width: 40%;
-                            height: 120px;
-                        }
-
-                        h2 {
-                            font-size: 1.1rem;
-                        }
-                    }
-                }
-
+            .box {
+                margin: 1rem 0;
             }
         }
     }
 
 }
-
-
-
 
 @media (max-width:500px) {
     .containerTestimoni {
@@ -1897,32 +1967,40 @@ footer {
             }
         }
     }
-}
-
-@media (max-width:450px) {
-
-    section,
-    header {
-        padding: 0 15px;
-    }
-
-    form {
-
-        .form-group {
-
-            .input-group {
-
-                button {
-                    width: 25%;
-                }
-            }
-        }
-    }
-
 
     .artikel {
 
         .container {
+
+            article {
+                .title {
+                    img {
+                        height: 250px;
+                    }
+                }
+
+                .share {
+
+                    .perShare {
+
+                        svg {
+                            height: 20px;
+                        }
+                    }
+                }
+
+                .artikelTerkait {
+                    .perArtikelTerkait {
+                        width: 100%;
+                        margin: 10px 0;
+
+                        img {
+                            height: 200px;
+                        }
+                    }
+                }
+
+            }
 
             .containerArtikel {
 
@@ -1939,10 +2017,6 @@ footer {
                         }
                     }
                 }
-            }
-
-            .kategori {
-                margin-top: 50px;
             }
 
             .rekomendasi {
@@ -1972,14 +2046,68 @@ footer {
             }
         }
     }
+}
 
+@media (max-width:450px) {
+
+    section,
+    header {
+        padding: 0 20px;
+    }
+
+    form {
+
+        .form-group {
+
+            .input-group {
+
+                button {
+                    width: 25%;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (max-width:400px) {
+    .artikel {
+
+        .container {
+            article {
+
+                .title {
+                    img {
+                        height: 200px;
+                    }
+
+                    h1 {
+                        font-size: 1.3rem;
+                    }
+
+                    .penulis {
+                        font-size: .9rem;
+                    }
+                }
+
+                .main {
+
+                    h2 {
+                        font-size: 1.1rem;
+                    }
+
+                }
+            }
+        }
+    }
 }
 
 @media (max-width:350px) {
 
     section,
     header {
-        padding: 0 10px;
+        padding: 0 15px;
     }
 
     header {
@@ -2115,6 +2243,39 @@ footer {
 
         .container {
 
+
+            article {
+                .title {
+                    img {
+                        margin: 10px 0;
+                    }
+                }
+
+                .share {
+                    margin-top: 20px;
+                }
+
+                .subTitle {
+                    margin: 0;
+                    padding: 20px 0 0 0;
+                    font-size: 1.2rem;
+                }
+
+                .artikelTerkait {
+
+                    .perArtikelTerkait {
+                        width: 100%;
+                        margin: 10px 0;
+
+                        img {
+                            height: 200px;
+                        }
+                    }
+                }
+
+            }
+
+
             .containerArtikel {
 
                 .daftarArtikel {
@@ -2191,6 +2352,31 @@ footer {
     .artikel {
 
         .container {
+
+            article {
+
+                .title {
+                    img {
+                        height: 170px;
+                    }
+                }
+
+                .main{
+
+                    p{
+                        font-size: .9rem;
+                    }
+                }
+
+                .artikelTerkait {
+                    .perArtikelTerkait {
+                        img {
+                            height: 150px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
 
             .containerArtikel {
 

@@ -1134,6 +1134,7 @@ footer .container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 50px;
 }
 
 .artikel .container .containerArtikel .share .perShare,
@@ -1153,14 +1154,14 @@ footer .container {
 
 .artikel .container .containerArtikel .share .perShare:first-child,
 .artikel .container article .share .perShare:first-child {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .artikel .container .containerArtikel .share .perShare:last-child,
 .artikel .container article .share .perShare:last-child {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .artikel .container .containerArtikel .share .perShare svg,
@@ -1184,9 +1185,6 @@ footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin: 25px 0;
 }
 
@@ -1378,6 +1376,12 @@ footer .container {
   .containerTestimoni .container .testimoni .perTestimoni:last-child {
     display: none;
   }
+  .artikel .container article .title img {
+    height: 300px;
+  }
+  .artikel .container article .share .perShare {
+    padding: 10px;
+  }
   .artikel .container .containerArtikel {
     width: 50%;
   }
@@ -1386,9 +1390,6 @@ footer .container {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
   }
   .artikel .container .containerArtikel .daftarArtikel .perArtikel img {
     width: 100%;
@@ -1397,6 +1398,53 @@ footer .container {
   }
   .artikel .container .rekomendasi {
     width: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .artikel .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .artikel .container article {
+    margin-bottom: 50px;
+  }
+  .artikel .container article .title img {
+    height: 350px;
+  }
+  .artikel .container article,
+  .artikel .container .containerArtikel {
+    width: 100%;
+    margin-right: 0;
+  }
+  .artikel .container article .daftarArtikel .perArtikel,
+  .artikel .container .containerArtikel .daftarArtikel .perArtikel {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .artikel .container article .daftarArtikel .perArtikel img,
+  .artikel .container .containerArtikel .daftarArtikel .perArtikel img {
+    width: 40%;
+    height: 200px;
+    margin-right: 10px;
+  }
+  .artikel .container .rekomendasi {
+    width: 100%;
+    position: static;
+    padding: 0;
+  }
+  .artikel .container .rekomendasi .rekomendasiArtikel .perRekomendasiArtikel img {
+    width: 40%;
+    height: 150px;
+  }
+  .artikel .container .rekomendasi .rekomendasiArtikel .perRekomendasiArtikel h2 {
+    line-height: 30px;
+    font-size: 1.3rem;
+  }
+  .artikel .container .kategori {
+    margin-top: 50px;
   }
 }
 
@@ -1454,32 +1502,6 @@ footer .container {
   .containerTestimoni .container .testimoni .perTestimoni {
     height: 700px;
   }
-  .artikel .container {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .artikel .container .containerArtikel {
-    width: 100%;
-    margin-right: 0;
-  }
-  .artikel .container .containerArtikel .daftarArtikel .perArtikel img {
-    width: 100%;
-    height: 300px;
-    margin-right: 0;
-  }
-  .artikel .container .rekomendasi {
-    width: 100%;
-    position: static;
-    padding: 0;
-  }
-  .artikel .container .rekomendasi .rekomendasiArtikel .perRekomendasiArtikel img {
-    width: 30%;
-    height: 100px;
-  }
-  .artikel .container .rekomendasi .rekomendasiArtikel .perRekomendasiArtikel h2 {
-    line-height: 30px;
-    font-size: 1.3rem;
-  }
 }
 
 @media (max-width: 700px) {
@@ -1498,6 +1520,40 @@ footer .container {
   }
   .containerTestimoni .container .testimoni .perTestimoni:last-child {
     display: inline-block;
+  }
+  .artikel .container article .title img {
+    height: 300px;
+  }
+  .artikel .container article .title h1 {
+    font-size: 1.7rem;
+  }
+  .artikel .container article .main h2 {
+    font-size: 1.3rem;
+  }
+  .artikel .container article .artikelTerkait {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .artikel .container article .artikelTerkait .perArtikelTerkait {
+    width: calc(95%/2);
+  }
+  .artikel .container .containerArtikel .daftarArtikel .perArtikel {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .artikel .container .containerArtikel .daftarArtikel .perArtikel img {
+    width: 100%;
+    height: 250px;
+    margin-right: 0;
+  }
+  .artikel .container .rekomendasi .rekomendasiArtikel .perRekomendasiArtikel img {
+    width: 40%;
+    height: 120px;
+  }
+  .artikel .container .rekomendasi .rekomendasiArtikel .perRekomendasiArtikel h2 {
+    font-size: 1.1rem;
   }
 }
 
@@ -1521,9 +1577,6 @@ footer .container {
   .heroHome .container .caption p {
     font-size: 1.1rem;
   }
-  .pt-50 {
-    padding-top: 15px;
-  }
   .full .container h1 {
     font-size: 1.5rem;
   }
@@ -1545,16 +1598,11 @@ footer .container {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .artikel .container .containerArtikel .daftarArtikel .perArtikel img {
-    height: 250px;
-    margin-right: 0;
-  }
-  .artikel .container .rekomendasi .rekomendasiArtikel .perRekomendasiArtikel img {
-    width: 40%;
-    height: 120px;
-  }
-  .artikel .container .rekomendasi .rekomendasiArtikel .perRekomendasiArtikel h2 {
-    font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .footer .container .box {
+    margin: 1rem 0;
   }
 }
 
@@ -1562,24 +1610,24 @@ footer .container {
   .containerTestimoni .container h1 {
     font-size: 1.3rem;
   }
-}
-
-@media (max-width: 450px) {
-  section,
-  header {
-    padding: 0 15px;
+  .artikel .container article .title img {
+    height: 250px;
   }
-  form .form-group .input-group button {
-    width: 25%;
+  .artikel .container article .share .perShare svg {
+    height: 20px;
+  }
+  .artikel .container article .artikelTerkait .perArtikelTerkait {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .artikel .container article .artikelTerkait .perArtikelTerkait img {
+    height: 200px;
   }
   .artikel .container .containerArtikel h1 {
     font-size: 1.5rem;
   }
   .artikel .container .containerArtikel .daftarArtikel .perArtikel img {
     height: 200px;
-  }
-  .artikel .container .kategori {
-    margin-top: 50px;
   }
   .artikel .container .rekomendasi {
     margin-top: 50px;
@@ -1601,10 +1649,35 @@ footer .container {
   }
 }
 
+@media (max-width: 450px) {
+  section,
+  header {
+    padding: 0 20px;
+  }
+  form .form-group .input-group button {
+    width: 25%;
+  }
+}
+
+@media (max-width: 400px) {
+  .artikel .container article .title img {
+    height: 200px;
+  }
+  .artikel .container article .title h1 {
+    font-size: 1.3rem;
+  }
+  .artikel .container article .title .penulis {
+    font-size: .9rem;
+  }
+  .artikel .container article .main h2 {
+    font-size: 1.1rem;
+  }
+}
+
 @media (max-width: 350px) {
   section,
   header {
-    padding: 0 10px;
+    padding: 0 15px;
   }
   header .container .logo h1 {
     font-size: 1.3rem;
@@ -1668,6 +1741,24 @@ footer .container {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+  .artikel .container article .title img {
+    margin: 10px 0;
+  }
+  .artikel .container article .share {
+    margin-top: 20px;
+  }
+  .artikel .container article .subTitle {
+    margin: 0;
+    padding: 20px 0 0 0;
+    font-size: 1.2rem;
+  }
+  .artikel .container article .artikelTerkait .perArtikelTerkait {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .artikel .container article .artikelTerkait .perArtikelTerkait img {
+    height: 200px;
+  }
   .artikel .container .containerArtikel .daftarArtikel .perArtikel img {
     height: 170px;
   }
@@ -1690,6 +1781,16 @@ footer .container {
   }
   .containerTestimoni .container h1 {
     font-size: 1.1rem;
+  }
+  .artikel .container article .title img {
+    height: 170px;
+  }
+  .artikel .container article .main p {
+    font-size: .9rem;
+  }
+  .artikel .container article .artikelTerkait .perArtikelTerkait img {
+    height: 150px;
+    margin-bottom: 0;
   }
   .artikel .container .containerArtikel .daftarArtikel .perArtikel img {
     height: 150px;
